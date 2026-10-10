@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#4d148c">
+<meta name="description" content="Sonesh Bansal — AI-native Senior Technical Product Owner. Product strategy, technical delivery, and customer-focused solutions.">
+<title>Sonesh Bansal — Technical Product Leadership</title>
+<style>
+  :root {
+    --bg: #f7f5fa;
+    --surface: #ffffff;
+    --white: #fff;
+    --text: #24133f;
+    --muted: #625b6b;
+    --purple: #4d148c;
+    --orange: #ff6600;
+    --line: rgba(77,20,140,.13);
+    --shadow: 0 14px 38px rgba(49,20,77,.08);
+    --radius: 20px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: Arial, Helvetica, -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased; line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 3px solid #ff9b54; outline-offset: 4px; }
+  .nav-wrap { position: sticky; top: 0; z-index: 10; background: rgba(255,255,255,.96); backdrop-filter: blur(16px); border-bottom: 3px solid var(--orange); }
+  nav { max-width: 1120px; margin: auto; padding: 0 24px; min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { font-weight: 800; letter-spacing: -.055em; font-size: 20px; white-space: nowrap; color: var(--purple); }
+  .brand .brand-orange { color: var(--orange); }
+  .nav-links { display: flex; align-items: center; gap: 25px; color: #393044; font-size: 13px; font-weight: 700; }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-cta { background: var(--purple); color: white !important; padding: 9px 15px; border-radius: 5px; }
+  .nav-cta:hover { background: #361064; }
+  main { overflow: hidden; }
+  .hero { position: relative; background: var(--purple); color: white; padding: 92px 24px 74px; }
+  .hero-inner { max-width: 1120px; margin: auto; position: relative; z-index: 1; }
+  .hero::after { content: ""; position: absolute; right: -90px; top: -140px; width: 490px; height: 490px; border: 70px solid rgba(255,255,255,.055); border-radius: 50%; }
+  .eyebrow { color: var(--orange); text-transform: uppercase; letter-spacing: .14em; font-size: 11px; font-weight: 800; }
+  .hero .eyebrow { color: #ff9b54; }
+  h1 { font-size: clamp(43px, 7vw, 78px); letter-spacing: -.055em; line-height: 1.02; margin: 19px 0 23px; max-width: 850px; font-weight: 800; }
+  .gradient { color: #ff8a32; }
+  .hero-copy { max-width: 690px; margin: 0; font-size: clamp(18px, 2vw, 22px); line-height: 1.5; color: rgba(255,255,255,.84); }
+  .hero-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; margin-top: 30px; font-size: 14px; font-weight: 700; }
+  .button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; background: var(--orange); color: white; padding: 13px 19px; border-radius: 5px; transition: transform .2s, background .2s; font-weight: 800; }
+  .button:hover { background: #e95b00; transform: translateY(-1px); }
+  .text-link { color: white; border-bottom: 1px solid rgba(255,255,255,.6); padding: 8px 0; }
+  .text-link:hover { color: #ff9b54; }
+  .hero-meta { margin-top: 40px; display: flex; gap: 9px; flex-wrap: wrap; }
+  .pill { border: 1px solid rgba(255,255,255,.23); background: rgba(255,255,255,.08); color: white; border-radius: 4px; padding: 8px 12px; font-size: 12px; }
+  .section { max-width: 1120px; margin: auto; padding: 66px 24px 22px; }
+  .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 25px; }
+  .section h2 { font-size: clamp(30px, 4vw, 45px); letter-spacing: -.045em; line-height: 1.1; margin: 8px 0 0; color: var(--purple); }
+  .section-intro { color: var(--muted); max-width: 430px; font-size: 15px; margin: 0; }
+  .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--purple); border-radius: var(--radius); box-shadow: var(--shadow); padding: 28px; }
+  .span-7 { grid-column: span 7; }
+  .span-5 { grid-column: span 5; }
+  .span-4 { grid-column: span 4; }
+  .span-8 { grid-column: span 8; }
+  .span-12 { grid-column: span 12; }
+  .card h3 { margin: 0 0 10px; font-size: 21px; letter-spacing: -.025em; color: var(--purple); }
+  .card p { margin: 0; color: var(--muted); font-size: 14px; }
+  .big-number { font-size: 44px; font-weight: 800; letter-spacing: -.06em; line-height: 1; margin: 0 0 14px; }
+  .card-kicker { color: var(--orange); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; margin-bottom: 14px; }
+  .capability { min-height: 215px; }
+  .icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 8px; background: #f1eafa; color: var(--purple); margin-bottom: 20px; }
+  .icon svg { width: 21px; height: 21px; }
+  .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .tag { background: #f1eafa; color: var(--purple); border-radius: 4px; padding: 7px 10px; font-size: 12px; font-weight: 600; }
+  .experience { display: grid; grid-template-columns: 175px 1fr; gap: 24px; padding: 23px 0; border-top: 1px solid var(--line); }
+  .experience:first-of-type { border-top: 0; padding-top: 0; }
+  .period { color: var(--muted); font-size: 12px; line-height: 1.7; }
+  .role { font-size: 18px; font-weight: 800; letter-spacing: -.02em; color: var(--text); }
+  .company { font-size: 14px; color: var(--purple); font-weight: 700; margin-top: 3px; }
+  .location { font-size: 12px; color: var(--muted); margin-top: 7px; }
+  .experience-note { color: var(--muted); font-size: 13px; margin-top: 8px; }
+  .credential { display: flex; align-items: flex-start; gap: 13px; padding: 15px 0; border-top: 1px solid var(--line); }
+  .credential:first-of-type { border-top: 0; padding-top: 0; }
+  .check { color: var(--orange); font-size: 18px; line-height: 1.2; }
+  .credential strong { display: block; font-size: 14px; font-weight: 700; color: var(--text); }
+  .credential span { display: block; color: var(--muted); font-size: 12px; margin-top: 3px; }
+  .contact { background: var(--purple); color: white; border-radius: 20px; padding: clamp(30px, 6vw, 62px); text-align: center; border-bottom: 7px solid var(--orange); }
+  .contact .eyebrow { color: #ff9b54; }
+  .contact h2 { color: white; font-size: clamp(36px, 5.5vw, 60px); max-width: 720px; margin: 15px auto 18px; }
+  .contact p { color: rgba(255,255,255,.78); margin: 0 auto 28px; max-width: 520px; }
+  .contact .button { background: var(--orange); color: white; }
+  .contact .button:hover { background: #e95b00; }
+  .contact-links { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; margin-top: 22px; font-size: 13px; color: #f1eafa; }
+  .contact-links a:hover { color: #ff9b54; }
+  footer { max-width: 1120px; margin: 40px auto 0; padding: 25px 24px 32px; display: flex; justify-content: space-between; gap: 15px; color: var(--muted); font-size: 11px; border-top: 1px solid var(--line); }
+  .top-link { color: var(--purple); font-weight: 700; }
+  @media (max-width: 760px) {
+    nav { padding: 0 18px; }
+    .nav-links { gap: 12px; }
+    .nav-links a:not(.nav-cta) { display: none; }
+    .hero { padding: 70px 20px 55px; }
+    .section { padding: 52px 18px 10px; }
+    .section-head { align-items: flex-start; flex-direction: column; }
+    .span-7,.span-5,.span-4,.span-8,.span-12 { grid-column: span 12; }
+    .experience { grid-template-columns: 1fr; gap: 7px; }
+    .capability { min-height: auto; }
+    .card { padding: 23px; border-radius: 15px; }
+    footer { padding: 24px 18px; flex-direction: column; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="nav-wrap">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#home">Sonesh<span class="brand-orange">.</span> Bansal</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#credentials">Credentials</a>
+      <a class="nav-cta" href="#contact">Let’s connect</a>
+    </div>
+  </nav>
+</div>
+<main>
+  <header class="hero" id="home">
+    <div class="eyebrow">AI-native product leadership · Hyderabad, India</div>
+    <h1>Turning complex problems<br><span class="gradient">into clear product direction.</span></h1>
+    <p class="hero-copy">I’m Sonesh Bansal, a Senior Technical Product Owner focused on product strategy, backlog prioritisation, and bringing technology and customer needs together.</p>
+    <div class="hero-actions">
+      <a class="button" href="#experience">Explore my experience <span aria-hidden="true">↘</span></a>
+      <a class="text-link" href="mailto:soneshbansal@gmail.com">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="hero-meta" aria-label="Professional highlights">
+      <span class="pill">CSPO®</span><span class="pill">Certified AI-Empowered SAFe® 6 PO/PM</span><span class="pill">Product strategy</span><span class="pill">RPA &amp; IT</span>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <div class="section-head">
+      <div><div class="eyebrow">A little about me</div><h2>Product thinking.<br>Technical grounding.</h2></div>
+      <p class="section-intro">A product professional with experience across multiple industries, combining customer-facing collaboration with technical and process understanding.</p>
+    </div>
+    <div class="grid">
+      <article class="card span-7">
+        <div class="card-kicker">My approach</div>
+        <h3>Connect the “why” to the “how.”</h3>
+        <p>My background spans RPA and IT, with experience in logistics and transportation, banking and insurance, eCommerce, automotive, oil and gas, and healthcare. I bring a product-management mindset to prioritisation, requirements, process improvement, and resolving technical challenges.</p>
+      </article>
+      <article class="card span-5">
+        <div class="card-kicker">Working principles</div>
+        <h3>Curious by nature.</h3>
+        <p>Motivated by continuous learning, relationship building, and working through customer and business challenges with a practical, collaborative mindset.</p>
+        <div class="tag-list"><span class="tag">Customer focus</span><span class="tag">Collaboration</span><span class="tag">Continuous learning</span></div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="expertise">
+    <div class="section-head">
+      <div><div class="eyebrow">What I bring</div><h2>Product craft, end to end.</h2></div>
+      <p class="section-intro">A mix of product leadership, delivery practices, process improvement, and technical fluency.</p>
+    </div>
+    <div class="grid">
+      <article class="card span-4 capability">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6"/><path d="M16 7h3v3"/></svg></div>
+        <h3>Product strategy</h3><p>Product vision, roadmap, backlog prioritisation, cost-benefit analysis, and ROI calculation.</p>
+      </article>
+      <article class="card span-4 capability">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="8"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Agile delivery</h3><p>ART and team backlog prioritisation, product ownership, and collaboration across delivery teams.</p>
+      </article>
+      <article class="card span-4 capability">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 19V5h14v14z"/><path d="M8 9h8M8 12h8M8 15h5"/></svg></div>
+        <h3>Process &amp; technology</h3><p>Requirements gathering, process mapping, RPA, API testing, and technical problem solving.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-head">
+      <div><div class="eyebrow">Career journey</div><h2>Experience that compounds.</h2></div>
+      <p class="section-intro">Roles across product ownership, business systems, software engineering, and technical support.</p>
+    </div>
+    <div class="card">
+      <div class="experience">
+        <div class="period">Aug 2024 – Present<br>Hyderabad, Telangana</div>
+        <div><div class="role">Senior Technical Product Owner</div><div class="company">FedEx ACC</div><p class="experience-note">Product ownership and technical product responsibilities.</p></div>
+      </div>
+      <div class="experience">
+        <div class="period">Dec 2021 – Aug 2024<br>Hyderabad, Telangana</div>
+        <div><div class="role">Senior Business Systems Analyst</div><div class="company">Optum</div></div>
+      </div>
+      <div class="experience">
+        <div class="period">Feb 2020 – Dec 2021<br>Greater Hyderabad Area</div>
+        <div><div class="role">Senior Software Engineer</div><div class="company">Tech Mahindra</div></div>
+      </div>
+      <div class="experience">
+        <div class="period">Jan 2018 – Jan 2020<br>Hyderabad Area</div>
+        <div><div class="role">Member Technical</div><div class="company">CDK Global</div></div>
+      </div>
+      <div class="experience">
+        <div class="period">Nov 2015 – Dec 2017<br>Hyderabad Area</div>
+        <div><div class="role">Support Engineer</div><div class="company">Amazon</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="credentials">
+    <div class="section-head">
+      <div><div class="eyebrow">Credentials &amp; toolkit</div><h2>Learning in practice.</h2></div>
+      <p class="section-intro">Formal product and technology credentials, supported by a broad working toolkit.</p>
+    </div>
+    <div class="grid">
+      <article class="card span-7">
+        <div class="card-kicker">Certifications</div>
+        <div class="credential"><div class="check">✳</div><div><strong>Certified Scrum Product Owner (CSPO®)</strong><span>Scrum Alliance</span></div></div>
+        <div class="credential"><div class="check">✳</div><div><strong>Certified AI-Empowered SAFe® 6 Product Owner/Product Manager</strong><span>SAFe®</span></div></div>
+        <div class="credential"><div class="check">✳</div><div><strong>Scrum Foundation Professional Certificate</strong></div></div>
+        <div class="credential"><div class="check">✳</div><div><strong>UiPath Advanced RPA Developer</strong></div></div>
+        <div class="credential"><div class="check">✳</div><div><strong>Lean Six Sigma Yellow Belt</strong><span>Process improvement</span></div></div>
+        <div class="credential"><div class="check">✳</div><div><strong>Azure Fundamentals</strong></div></div>
+      </article>
+      <article class="card span-5">
+        <div class="card-kicker">Tools &amp; skills</div>
+        <h3>Across product and engineering.</h3>
+        <div class="tag-list">
+          <span class="tag">JIRA</span><span class="tag">Rally</span><span class="tag">Agility</span><span class="tag">Miro</span><span class="tag">Figma</span><span class="tag">Visio</span><span class="tag">UiPath</span><span class="tag">Power Platform</span><span class="tag">Insomnia</span><span class="tag">Postman</span><span class="tag">C# / .NET</span><span class="tag">HTML</span><span class="tag">API testing</span><span class="tag">Oracle SQL Developer 11g</span><span class="tag">Microsoft SQL Server 2008</span>
+        </div>
+        <div class="card-kicker" style="margin-top:25px">Languages</div>
+        <div class="tag-list"><span class="tag">English</span><span class="tag">Hindi</span><span class="tag">Telugu</span></div>
+      </article>
+      <article class="card span-12">
+        <div class="card-kicker">Education</div>
+        <h3>Bachelor’s Degree, Computer Science</h3>
+        <p>Bharat Institute of Engineering &amp; Technology <span style="color:#a1a1a6">·</span> 2010–2014</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="contact">
+      <div class="eyebrow">Start a conversation</div>
+      <h2>Have a product challenge in mind?</h2>
+      <p>Let’s connect to exchange ideas on product strategy, technology, and solving meaningful customer problems.</p>
+      <a class="button" href="mailto:soneshbansal@gmail.com">Email Sonesh <span aria-hidden="true">↗</span></a>
+      <div class="contact-links">
+        <a href="mailto:soneshbansal@gmail.com">soneshbansal@gmail.com</a>
+        <a href="https://www.linkedin.com/in/sonesh-bansal-a771a4100" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <span>© <span id="year">2026</span> Sonesh Bansal</span>
+  <span>Product thinking. Reliable delivery.</span>
+  <a class="top-link" href="#home">Back to top ↑</a>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
